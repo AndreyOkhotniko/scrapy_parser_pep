@@ -11,10 +11,10 @@ class PepParsePipeline:
         self.status_count = defaultdict(int)
 
     def process_item(self, item, spider):
-            status = item.get('status')
-            self.status_count[status] += 1
-            self.total += 1
-            return item
+        status = item.get('status')
+        self.status_count[status] += 1
+        self.total += 1
+        return item
 
     def close_spider(self, spider):
         time_pattern = dt.now().strftime('%Y-%m-%dT%H-%M-%S')
