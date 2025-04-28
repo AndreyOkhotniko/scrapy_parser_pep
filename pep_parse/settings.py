@@ -5,8 +5,7 @@ BASE_DIR = Path(__file__).parent.parent
 OUTPUT_DIR = 'results'
 
 BOT_NAME = 'pep_parse'
-NEWSPIDER_MODULE = f'{BOT_NAME}.spiders'
-SPIDER_MODULES = [NEWSPIDER_MODULE]
+SPIDER_MODULES = [f'{BOT_NAME}.spiders']
 ROBOTSTXT_OBEY = True
 FEEDS = {
     f'{OUTPUT_DIR}/pep_%(time)s.csv': {
